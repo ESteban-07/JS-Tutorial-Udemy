@@ -1,0 +1,88 @@
+/* Typografy */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Grid */
+.grid {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    place-content: center;
+}
+
+.grid-wrapper .paragraph {
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    padding: 16px;
+}
+
+.paragraph .span {
+    color: #49a6e9;
+}
+
+.button-wrapper {
+    display: flex;
+    column-gap: 10px;
+}
+
+.button-wrapper .btn {
+    background-color: transparent;
+    border: 2px solid #222222;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    color: #222222;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 20px;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.button-wrapper .btn:hover {
+    background-color: #222222;
+    color: #ffffff;
+    transition: all 0.3s linear;
+}
+
+/* Media Queries */
+
+@media (max-width: 650px) {
+    .grid {
+        width: 90%;
+    }
+    .grid-wrapper .paragraph {
+        font-size: 24px;
+    }
+    .button-wrapper .btn {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .button-wrapper {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
