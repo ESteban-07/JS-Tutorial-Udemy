@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main class="modal-banner">
+        <div class="box">
+            <h1 class="box__title">Modal project</h1>
+            <button class="show-btn">Open Modal</button>
+        </div>
+
+        <dialog class="modal-content">
+            <h3 class="modal-title">Modal Content</h3>
+            <button class="close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </dialog>
+    </main>
+    <!-- javascript -->
+    <script>
+        const modalContent = document.querySelector('.modal-content');
+        const closeBtn = document.querySelector('.close-btn');
+        const showBtn = document.querySelector('.show-btn');
+
+        showBtn.addEventListener('click', function () {
+            modalContent.showModal();
+        })
+        closeBtn.addEventListener('click', () => modalContent.close())
+    </script>
+</body>
+
+</html>
